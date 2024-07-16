@@ -1,8 +1,8 @@
-package unifacef.edu.IJB.model.entity;
+package IJB.model.entity;
 
 import jakarta.persistence.*;
-import unifacef.edu.IJB.Enum.TipoPessoaEnum;
-import unifacef.edu.IJB.model.dto.PessoaDTO;
+import IJB.Enum.TipoPessoaEnum;
+import IJB.model.dto.PessoaDTO;
 
 @Entity
 @Table(name="pessoa")

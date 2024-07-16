@@ -1,6 +1,6 @@
-package unifacef.edu.IJB.model.dto;
+package IJB.model.dto;
 
-import unifacef.edu.IJB.Enum.TipoPessoaEnum;
+import IJB.Enum.TipoPessoaEnum;
 
 public class PessoaDTO {
     private Long id;

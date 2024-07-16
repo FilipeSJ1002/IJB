@@ -1,4 +1,4 @@
-package unifacef.edu.IJB.model.dto;
+package IJB.model.dto;
 
 public class EnderecoDTO {
 }
