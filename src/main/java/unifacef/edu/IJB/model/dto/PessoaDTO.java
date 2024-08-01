@@ -1,46 +1,36 @@
-package unifacef.edu.IJB.model.entity;
+package unifacef.edu.IJB.model.dto;
 
-import jakarta.persistence.*;
 import unifacef.edu.IJB.Enum.TipoPessoaEnum;
-import unifacef.edu.IJB.model.dto.PessoaDTO;
+import unifacef.edu.IJB.model.entity.VoluntarioEntity;
 
-@Entity
-@Table(name="pessoa")
-public class PessoaEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PessoaDTO {
     private Long id;
-    @Column(name="cpf")
     private String cpf;
-    @Column(name="nome")
     private String nome;
-    @Column(name="telefone")
     private String telefone;
-    @Column(name="email")
     private String email;
-    @Column(name="tipoPessoa")
-    private TipoPessoaEnum tipoPessoa;
-    @Column(name="sobreVoce")
     private String sobreVoce;
-    @Column(name="empregoAtual")
     private String empregoAtual;
-    @Column(name="hobby")
     private String hobby;
-    @Column(name="intencao")
-    private String intencao;
+    private String intencao ;
+    private TipoPessoaEnum tipoPessoa;
+    private VoluntarioDTO voluntarioDTO;
 
-    private VoluntarioEntity voluntarioEntity;
-
-
-    public PessoaEntity() {
-    }
-    public PessoaEntity(int tipoPessoa) {}
-    public PessoaEntity(TipoPessoaEnum tipoPessoa){
-        this.tipoPessoa = tipoPessoa;
+    public PessoaDTO() {
     }
 
-    public PessoaEntity(String cpf, String nome, String telefone, String email,
-                        String sobreVoce, String empregoAtual, String hobby, String intencao) {
+    public PessoaDTO(String cpf, String nome, String telefone, String email, String empregoAtual, String hobby, String intencao) {
+    }
+    public PessoaDTO(TipoPessoaEnum tipoPessoa){this.tipoPessoa = tipoPessoa;}
+    public PessoaDTO(
+            String cpf,
+            String nome,
+            String telefone,
+            String email,
+            String sobreVoce,
+            String empregoAtual,
+            String hobby,
+            String intencao) {
         this.cpf = cpf;
         this.nome = nome;
         this.telefone = telefone;
@@ -51,7 +41,10 @@ public class PessoaEntity {
         this.intencao = intencao;
     }
 
-    public Long getId(){return id;}
+
+    public Long getId(){
+        return id;
+    }
 
     public String getCpf() {
         return cpf;
@@ -89,8 +82,8 @@ public class PessoaEntity {
         return tipoPessoa;
     }
 
-    public void setTipoPessoa(TipoPessoaEnum tipoVoluntario) {
-        this.tipoPessoa = tipoVoluntario;
+    public void setTipoPessoa(TipoPessoaEnum tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
     }
 
     public String getSobreVoce() {
@@ -125,6 +118,16 @@ public class PessoaEntity {
         this.intencao = intencao;
     }
 
+    public VoluntarioDTO getVoluntarioDTO() {
+        return voluntarioDTO;
+    }
+
+    public void setVoluntarioDTO(VoluntarioDTO voluntarioDTO) {
+        this.voluntarioDTO = voluntarioDTO;
+    }
+
+    private VoluntarioEntity voluntarioEntity;
     public VoluntarioEntity getVoluntarioEntity(){return voluntarioEntity;}
     public void setVoluntarioEntity(VoluntarioEntity voluntarioEntity){this.voluntarioEntity = voluntarioEntity;}
+
 }

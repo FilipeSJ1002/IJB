@@ -29,9 +29,9 @@ public class PessoaService {
         // 2 - Retornar PessoaDTO com as informacoes do VoluntarioEntity
         // 3 - Criar IF para TipoPessoaEnum para saber se a pessoa é um Voluntario ou Apoiador
         if (pessoaDTO.getTipoPessoa() == TipoPessoaEnum.VOLUNTARIO) {
-            VoluntarioEntity voluntarioEntity = injecaoVoluntario.save(converteVoluntarioDTO(pessoaDTO));
+            VoluntarioEntity voluntarioEntity = injecaoVoluntario.save(convertePessoaDtoParaVoluntarioEntity(pessoaDTO));
             // Adiciona as informações do VoluntarioEntity ao PessoaDTO
-            pessoaDTO.setVoluntarioDTO(converteVoluntarioEntity(voluntarioEntity.getPessoa()));
+            pessoaDTO.setVoluntarioDTO(converteVoluntarioEntityParaVoluntarioDto(pessoaDTO));
         }
 
         return converteEntity(pessoaEntity);
@@ -88,7 +88,7 @@ public class PessoaService {
         return new PessoaDTO(pessoaEntity.getTipoPessoa());
     }
 
-    public VoluntarioEntity converteVoluntarioDTO(PessoaDTO pessoaDTO) {
+    public VoluntarioEntity convertePessoaDtoParaVoluntarioEntity(PessoaDTO pessoaDTO) {
         VoluntarioEntity voluntarioEntity = new VoluntarioEntity();
         voluntarioEntity.setCargoDesejado(pessoaDTO.getVoluntarioDTO().getCargoDesejado());
         voluntarioEntity.setDataDisponivel(pessoaDTO.getVoluntarioDTO().getDataDisponivel());
@@ -98,17 +98,18 @@ public class PessoaService {
         // voluntarioEntity.setPessoa(pessoaEntity);
         return voluntarioEntity;
     }
-
-    public VoluntarioDTO converteVoluntarioEntity(PessoaEntity pessoaEntity) {
+//
+    public VoluntarioDTO converteVoluntarioEntityParaVoluntarioDto(PessoaDTO pessoaDTO) {
         VoluntarioDTO voluntarioDTO = new VoluntarioDTO();
-        voluntarioDTO.setCargoDesejado(pessoaEntity.getVoluntarioEntity().getCargoDesejado());
-        voluntarioDTO.setDataDisponivel(pessoaEntity.getVoluntarioEntity().getDataDisponivel());
+        voluntarioDTO.setCargoDesejado(pessoaDTO.getVoluntarioEntity().getCargoDesejado());
+        voluntarioDTO.setDataDisponivel(pessoaDTO.getVoluntarioEntity().getDataDisponivel());
         // Aqui você deve lidar com a conversão de PessoaEntity para PessoaDTO, se necessário
         // Exemplo:
         // PessoaDTO pessoaDTO = converteEntity(pessoaEntity);
         // voluntarioDTO.setPessoa(pessoaDTO);
         return voluntarioDTO;
     }
+
 
 
 }
