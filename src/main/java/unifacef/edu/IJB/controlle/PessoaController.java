@@ -33,4 +33,8 @@ public class PessoaController {
         return injecao.remove(id);
     }
 
+    public String removeAll() {
+        return injecao.removeAll();
+    }
+
 }

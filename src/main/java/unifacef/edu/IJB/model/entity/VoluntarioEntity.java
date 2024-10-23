@@ -53,4 +53,8 @@ public class VoluntarioEntity{
         this.dataDisponivel = dataDisponivel;
         this.pessoa = pessoa;
     }
+    public VoluntarioEntity(String cargoDesejado, String dataDisponivel) {
+        this.cargoDesejado = cargoDesejado;
+        this.dataDisponivel = dataDisponivel;
+    }
 }

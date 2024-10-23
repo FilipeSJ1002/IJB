@@ -44,7 +44,7 @@ public class PessoaEntity {
         this.telefone = telefone;
         this.email = email;
         this.sobreVoce = sobreVoce;
-        this.empregoAtual = empregoAtual;
+        this.empregoAtual = empregoAtual; // VAI VIRAR CARGO DESEJADO // será removido da classe de Voluntario
         this.hobby = hobby;
         this.intencao = intencao;
     }

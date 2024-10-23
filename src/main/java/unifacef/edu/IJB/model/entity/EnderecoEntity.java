@@ -17,7 +17,7 @@ public class EnderecoEntity {
     private String rua;
     @Column(name="numero")
     private int numero;
-    @Column(name="inform")
-    private String inform;
+    @Column(name="informacoesAdicionais")
+    private String informacoesAdicionais;
 
 }
