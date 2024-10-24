@@ -1,4 +1,4 @@
-package unifacef.edu.IJB;
+package InstitutoJB;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

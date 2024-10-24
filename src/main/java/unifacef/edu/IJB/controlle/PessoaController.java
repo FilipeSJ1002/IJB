@@ -1,9 +1,9 @@
-package unifacef.edu.IJB.controlle;
+package IJB.controlle;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import unifacef.edu.IJB.model.dto.PessoaDTO;
-import unifacef.edu.IJB.service.PessoaService;
+import IJB.model.dto.PessoaDTO;
+import IJB.service.PessoaService;
 
 import java.util.List;
 

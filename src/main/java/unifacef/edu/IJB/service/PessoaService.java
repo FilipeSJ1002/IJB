@@ -1,14 +1,14 @@
-package unifacef.edu.IJB.service;
+package IJB.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import unifacef.edu.IJB.Enum.TipoPessoaEnum;
-import unifacef.edu.IJB.model.dto.PessoaDTO;
-import unifacef.edu.IJB.model.dto.VoluntarioDTO;
-import unifacef.edu.IJB.model.entity.PessoaEntity;
-import unifacef.edu.IJB.model.entity.VoluntarioEntity;
-import unifacef.edu.IJB.model.repository.PessoaRepository;
-import unifacef.edu.IJB.model.repository.VoluntarioRepository;
+import IJB.Enum.TipoPessoaEnum;
+import IJB.model.dto.PessoaDTO;
+import IJB.model.dto.VoluntarioDTO;
+import IJB.model.entity.PessoaEntity;
+import IJB.model.entity.VoluntarioEntity;
+import IJB.model.repository.PessoaRepository;
+import IJB.model.repository.VoluntarioRepository;
 
 import java.util.ArrayList;
 import java.util.List;

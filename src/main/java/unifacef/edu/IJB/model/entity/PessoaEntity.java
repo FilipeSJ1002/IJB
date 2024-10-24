@@ -1,8 +1,8 @@
-package unifacef.edu.IJB.model.entity;
-
+package IJB.model.entity;
 
 import jakarta.persistence.*;
-import unifacef.edu.IJB.Enum.TipoPessoaEnum;
+import IJB.Enum.TipoPessoaEnum;
+import IJB.model.dto.PessoaDTO;
 
 @Entity
 @Table(name="pessoa")
@@ -29,6 +29,8 @@ public class PessoaEntity {
     @Column(name="intencao")
     private String intencao;
 
+    private VoluntarioEntity voluntarioEntity;
+
 
     public PessoaEntity() {
     }
@@ -44,7 +46,7 @@ public class PessoaEntity {
         this.telefone = telefone;
         this.email = email;
         this.sobreVoce = sobreVoce;
-        this.empregoAtual = empregoAtual; // VAI VIRAR CARGO DESEJADO // será removido da classe de Voluntario
+        this.empregoAtual = empregoAtual;
         this.hobby = hobby;
         this.intencao = intencao;
     }
@@ -123,4 +125,6 @@ public class PessoaEntity {
         this.intencao = intencao;
     }
 
+    public VoluntarioEntity getVoluntarioEntity(){return voluntarioEntity;}
+    public void setVoluntarioEntity(VoluntarioEntity voluntarioEntity){this.voluntarioEntity = voluntarioEntity;}
 }

@@ -1,4 +1,4 @@
-package unifacef.edu.IJB.model.telas;
+package IJB.model.telas;
 
 public interface CadastroColaborador extends TipoCadastro{
     private void cpf(){}

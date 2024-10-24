@@ -1,4 +1,4 @@
-package unifacef.edu.IJB.Enum;
+package IJB.Enum;
 
 public enum TipoPessoaEnum {
     VOLUNTARIO(1),

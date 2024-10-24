@@ -1,4 +1,4 @@
-package unifacef.edu.IJB.model.entity;
+package IJB.model.entity;
 
 
 import jakarta.persistence.*;

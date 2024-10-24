@@ -1,7 +1,6 @@
-package unifacef.edu.IJB.model.dto;
+package IJB.model.dto;
 
-import unifacef.edu.IJB.Enum.TipoPessoaEnum;
-import unifacef.edu.IJB.model.entity.VoluntarioEntity;
+import IJB.Enum.TipoPessoaEnum;
 
 public class PessoaDTO {
     private Long id;
@@ -125,9 +124,5 @@ public class PessoaDTO {
     public void setVoluntarioDTO(VoluntarioDTO voluntarioDTO) {
         this.voluntarioDTO = voluntarioDTO;
     }
-
-    private VoluntarioEntity voluntarioEntity;
-    public VoluntarioEntity getVoluntarioEntity(){return voluntarioEntity;}
-    public void setVoluntarioEntity(VoluntarioEntity voluntarioEntity){this.voluntarioEntity = voluntarioEntity;}
 
 }

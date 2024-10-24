@@ -1,4 +1,6 @@
-package unifacef.edu.IJB.model.dto;
+package IJB.model.dto;
+
+import IJB.model.entity.PessoaEntity;
 
 public class VoluntarioDTO {
     private String cargoDesejado;

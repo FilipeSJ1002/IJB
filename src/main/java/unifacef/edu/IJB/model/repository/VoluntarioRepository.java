@@ -1,7 +1,7 @@
-package unifacef.edu.IJB.model.repository;
+package IJB.model.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import unifacef.edu.IJB.model.entity.VoluntarioEntity;
+import IJB.model.entity.VoluntarioEntity;
 
 public interface VoluntarioRepository extends JpaRepository<VoluntarioEntity, Long> {
 
